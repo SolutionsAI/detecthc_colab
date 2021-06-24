@@ -6,6 +6,10 @@ RUN apt update && apt install -y zip htop screen libgl1-mesa-glx
 
 # Install python dependencies
 COPY requirements.txt .
+
+RUN apt-get update && apt-get install -y python3-opencv
+RUN pip install opencv-python
+
 RUN python -m pip install --upgrade pip
 RUN pip uninstall -y nvidia-tensorboard nvidia-tensorboard-plugin-dlprof
 RUN pip install --no-cache -r requirements.txt coremltools onnx gsutil notebook
