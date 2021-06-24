@@ -2,7 +2,6 @@ import argparse
 import time
 from pathlib import Path
 
-pip install opencv-python
 
 import cv2
 import torch
