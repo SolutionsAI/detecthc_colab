@@ -2,8 +2,7 @@ import argparse
 import time
 from pathlib import Path
 
-RUN apt-get update && apt-get install -y python3-opencv
-RUN pip install opencv-python
+pip install opencv-python
 
 import cv2
 import torch
