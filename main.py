@@ -28,7 +28,7 @@ st.write(x, 'squared is', x * x)
 
 
 if st.button('Detectar'):
-    b = !b
+    b = not b
     
     
 st.write(b)
