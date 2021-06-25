@@ -24,14 +24,12 @@ b = False
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
 
-B1 = st.button('Detectar')
-B2 = st.button('No Detectar')
 
-if B1:
-    b = True
+
+
+if st.button('Detectar'):
+    b = !b
     
-if B2:
-    b = False
     
 st.write(b)
 
@@ -46,56 +44,4 @@ st.write('You selected:', option)
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
