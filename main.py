@@ -16,7 +16,7 @@ st.write(pd.DataFrame({
 
 def detect():
     print("Hello from a function")
-    st.image('foto.jpeg', caption='ejemplo de esperma')
+    st.image('foto.jpeg', caption='ejemplo de esperma por funcion')
     
 detect()
 
