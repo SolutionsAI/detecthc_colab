@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import os
 from matplotlib import pyplot as plt
+import time
 
 st.title('Detect HOS Coomassie Sperm Solutions')
 
@@ -55,15 +56,16 @@ st.line_chart(chart_data)
 
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
 cont = 0
+my_bar = st.progress(0)
 for uploaded_file in uploaded_files:
      
-     cont = cont + 1
-     st.write('Imagenes Cargadas: ',cont)
+     
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
-
-
+     my_bar.progress(cont + 1)
+        
+st.write('Imagenes Cargadas: ',cont)
 if b:
     detect()
     
