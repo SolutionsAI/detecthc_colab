@@ -51,9 +51,9 @@ chart_data = pd.DataFrame(
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
-st.sidebar.line_chart(chart_data)
+st.line_chart(chart_data)
 
-uploaded_files = st.sidebar.file_uploader("Cargar Imágenes", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
 cont = 0
 for uploaded_file in uploaded_files:
      
