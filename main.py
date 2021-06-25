@@ -19,5 +19,6 @@ def detect():
     st.image('foto.jpeg', caption='ejemplo de esperma por funcion')
     
 detect()
+detect()
 
 
