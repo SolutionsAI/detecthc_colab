@@ -18,5 +18,5 @@ def detect():
     print("Hello from a function") 
     
 
-st.sidebar.slider()
+
 
