@@ -26,7 +26,7 @@ b = False
 if st.button('Detectar'):
     b = True
     
-if st.button('Detectar'):
+if st.button('No Detectar'):
     b = False
     
 st.write(b)
