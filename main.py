@@ -23,8 +23,8 @@ def detect():
 
 b = False
 
-x = st.sidebar.slider('x')  # 👈 this is a widget
-st.write(x, 'squared is', x * x)
+e = st.sidebar.slider('x')  # 👈 this is a widget
+st.write(e, 'squared is', e * e)
 
 
 
@@ -44,7 +44,9 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
+y = [2,6,2,9,7,1,5,7,5,2,8] 
 
+st.write(plt.plot(y))
 
 
     
