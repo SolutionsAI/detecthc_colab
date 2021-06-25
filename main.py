@@ -57,9 +57,11 @@ st.line_chart(chart_data)
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
 cont = 0
 my_bar = st.progress(0)
+t = len(uploaded_files)
+inc = 100/t
 for uploaded_file in uploaded_files:
      
-     cont = cont + 1
+     cont = cont + inc
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
