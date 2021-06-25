@@ -22,12 +22,12 @@ def detect():
 
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
-b = false
+b = False
 if st.button('Detectar'):
-    b = true
+    b = True
     
 if st.button('Detectar'):
-    b = false
+    b = False
     
 st.write(b)
 
