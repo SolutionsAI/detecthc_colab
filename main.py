@@ -3,6 +3,7 @@ import streamlit as st
 # working with sample data.
 import numpy as np
 import pandas as pd
+import os
 
 st.title('Detect HOS Coomassie Sperm Solutions')
 
@@ -41,6 +42,15 @@ option = st.selectbox(
      ('Email', 'Home phone', 'Mobile phone'))
 
 st.write('You selected:', option)
+
+
+
+filename = st.text_input('Enter a file path:')
+try:
+    with open(filename) as input:
+        st.text(input.read())
+except FileNotFoundError:
+    st.error('File not found.')
 
 
     
