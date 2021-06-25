@@ -47,8 +47,11 @@ st.write('You selected:', option)
 y = [2,6,2,9,7,1,5,7,5,2,8] 
 x = [1,2,3,4,5,6,7,8,9,10,11]
 
-plt.plot(x,y)
-st.write(plt.show())
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
 
     
     
