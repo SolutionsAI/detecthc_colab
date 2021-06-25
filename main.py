@@ -59,11 +59,11 @@ cont = 0
 my_bar = st.progress(0)
 for uploaded_file in uploaded_files:
      
-     
+     cont = cont + 1
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
-     my_bar.progress(cont + 1)
+     my_bar.progress(cont)
         
 st.write('Imagenes Cargadas: ',cont)
 if b:
