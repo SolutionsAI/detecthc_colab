@@ -19,7 +19,7 @@ def detect():
     st.image('foto.jpeg', caption='ejemplo de esperma por funcion')
     
 
-b = False
+
 
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
