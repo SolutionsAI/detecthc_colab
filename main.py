@@ -58,7 +58,10 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 cont = 0
 my_bar = st.progress(0)
 t = len(uploaded_files)
-inc = 100/t
+if t != 0:
+    inc = 100/t
+else:
+    inc = 0
 for uploaded_file in uploaded_files:
      
      cont = cont + inc
