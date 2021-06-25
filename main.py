@@ -14,7 +14,7 @@ st.write(pd.DataFrame({
 
 st.image('foto.jpeg', caption='ejemplo de esperma')
 
-def detect:
+def detect():
     print('detectando...')
     
 st.sidebar.slider()
