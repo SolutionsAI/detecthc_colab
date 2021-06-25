@@ -20,8 +20,10 @@ def detect():
     
 detect()
 
-import streamlit as st
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
 
-
+if st.button('Say hello'):
+    st.write('Why hello there')
+else:
+    st.write('Goodbye')
