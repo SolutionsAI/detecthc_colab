@@ -21,13 +21,13 @@ def detect():
 
 b = False
 
-x = st.slider('x')  # 👈 this is a widget
+x = st.sidebar.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
 
 
 
 
-if st.button('Detectar'):
+if st.sidebar.button('Detectar'):
     b = not b
     
     
