@@ -42,6 +42,8 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
+if option == 'Mobile phone':
+    st.button('Detectar') = False
     
     
  
