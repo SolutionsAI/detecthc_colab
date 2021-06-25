@@ -18,7 +18,7 @@ def detect():
     print("Hello from a function")
     st.image('foto.jpeg', caption='ejemplo de esperma por funcion')
     
-detect()
+
 
 x = st.slider('x')  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
@@ -27,3 +27,4 @@ if st.button('Say hello'):
     st.write('Why hello there')
 else:
     st.write('Goodbye')
+    detect()
