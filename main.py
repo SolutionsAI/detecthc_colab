@@ -12,4 +12,6 @@ st.write(pd.DataFrame({
     'second column': [10, 20, 30, 40]
 }))
 
+st.image('foto.jpeg', caption='ejemplo de esperma')
+
 
