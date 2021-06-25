@@ -12,11 +12,12 @@ st.write(pd.DataFrame({
     'second column': [10, 20, 30, 40]
 }))
 
-st.image('foto.jpeg', caption='ejemplo de esperma')
+
 
 def detect():
-    print("Hello from a function") 
+    print("Hello from a function")
+    st.image('foto.jpeg', caption='ejemplo de esperma')
     
-#detect()
+detect()
 
 
