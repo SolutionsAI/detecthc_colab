@@ -10,7 +10,7 @@ import time
 
 #SIDEBAR stuff---------------------------------
 #imagen
-st.sidebar.image('foto.jpeg')
+#st.sidebar.image('foto.jpeg')
 
 #umbral
 st.sidebar.write("Umbral de confianza para detección")
