@@ -15,7 +15,7 @@ st.sidebar.image('foto.jpeg', caption='Detector y clasificador de espermatozoide
 #umbral
 st.sidebar.write("umbral de confianza")
 e = st.sidebar.slider('x')  
-st.write(e)
+st.sidebar.write(e)
 #----------------------------------------------
 
 #titulo
