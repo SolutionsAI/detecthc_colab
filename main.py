@@ -11,9 +11,10 @@ import time
 #SIDEBAR stuff---------------------------------
 #imagen
 st.sidebar.image('foto.jpeg', caption='Detector y clasificador de espermatozoides')
+
 #umbral
 st.sidebar.write("umbral de confianza")
-e = st.sidebar.sidebar.slider('x')  
+e = st.sidebar.slider('x')  
 st.write(e)
 #----------------------------------------------
 
