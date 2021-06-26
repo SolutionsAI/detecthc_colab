@@ -13,7 +13,7 @@ import time
 st.sidebar.image('foto.jpeg', caption='Detector y clasificador de espermatozoides')
 
 #umbral
-st.sidebar.write("umbral de confianza")
+st.sidebar.write("Umbral de confianza para detección")
 e = st.sidebar.slider('x')  
 st.sidebar.write(e)
 #----------------------------------------------
@@ -35,11 +35,13 @@ for uploaded_file in uploaded_files:
      #st.image(detect(uploaded_file))
 st.write('Imagenes Cargadas: ',cont)
 st.write('')
+st.write('A continuación haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
 #boton detectar
-st.button("Detectar y clasificar")
+st.button("Comenzar")
 
 #grafico de resultdos
+st.write('Resultados:')
 y = [2,6,2,9,7,1,5,7,5,2,8] 
 x = [1,2,3,4,5,6,7,8,9,10,11]
 
