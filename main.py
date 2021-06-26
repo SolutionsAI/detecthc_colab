@@ -10,7 +10,7 @@ import time
 
 #SIDEBAR stuff---------------------------------
 #imagen
-st.sidebar.image('foto.jpeg', caption='Detector y clasificador de espermatozoides')
+st.sidebar.image('foto.jpeg', caption='Detector y clasificador HOS-Coomassie')
 
 #umbral
 st.sidebar.write("Umbral de confianza para detección")
@@ -48,7 +48,13 @@ x = [1,2,3,4,5,6,7,8,9,10,11]
 chart_data = pd.DataFrame(
      np.random.randn(5, 5),
      columns=['H+', 'H-', 'C+', 'C-', 'NC'])
-st.bar_chart(chart_data)    
+st.bar_chart(chart_data)   
+
+st-write('')
+
+#descargar imagenes clasificadas
+st.write('Descargar imágenes procesadas:')
+st.button("Descargar")
     
     
  
