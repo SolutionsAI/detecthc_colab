@@ -46,11 +46,10 @@ st.write('Resultados:')
 y = [2,6,2,9,7,1,5,7,5,2,8] 
 x = [1,2,3,4,5,6,7,8,9,10,11]
 
-classes_data = [70,50,100,78,64]
 
 chart_data = pd.DataFrame({
      'index': ['H+', 'H-', 'C+', 'C-', 'NC'],
-     classes = classes_data
+     'clases': [70,50,100,78,64]
 }).set_index('index')
 
 st.bar_chart(chart_data)   
