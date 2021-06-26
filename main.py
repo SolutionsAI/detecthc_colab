@@ -13,16 +13,17 @@ import time
 #st.sidebar.image('foto.jpeg')
 
 #umbral
-st.sidebar.write("Umbral de confianza para detección")
-e = st.sidebar.slider('x')  
-st.sidebar.write(e)
+st.sidebar.title('Opciones de configuración')
+st.sidebar.write("Umbral de confianza para detección:")
+e = st.sidebar.slider('conf')  
+#st.sidebar.write(e)
 #----------------------------------------------
 
 #titulo
 st.title('Detector y clasificador HOS-Coomassie')
 
 #descripcion
-st.write("Seleccione el conjunto de imagenes a segmentar y clasificar")
+st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
@@ -47,10 +48,11 @@ x = [1,2,3,4,5,6,7,8,9,10,11]
 
 classes_data = [70,50,100,78,64]
 
-chart_data = pd.DataFrame(
-     #np.random.randn(5, 5),
-     classes_data,
-     columns=['H+', 'H-', 'C+', 'C-', 'NC'])
+chart_data = pd.DataFrame({
+     'index': ['H+', 'H-', 'C+', 'C-', 'NC'],
+     classes = classes_data
+}).set_index('index')
+
 st.bar_chart(chart_data)   
 
 st.write('')
