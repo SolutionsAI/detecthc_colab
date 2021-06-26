@@ -10,7 +10,7 @@ import time
 
 #SIDEBAR stuff---------------------------------
 #imagen
-st.sidebar.image('foto.jpeg', caption='Detector y clasificador HOS-Coomassie')
+st.sidebar.image('foto.jpeg')
 
 #umbral
 st.sidebar.write("Umbral de confianza para detección")
@@ -19,7 +19,7 @@ st.sidebar.write(e)
 #----------------------------------------------
 
 #titulo
-st.title('Detect HOS Coomassie Sperm Solutions')
+st.title('Detector y clasificador HOS-Coomassie')
 
 #descripcion
 st.write("Seleccione el conjunto de imagenes a segmentar y clasificar")
