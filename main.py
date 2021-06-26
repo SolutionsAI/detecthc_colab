@@ -50,7 +50,7 @@ chart_data = pd.DataFrame(
      columns=['H+', 'H-', 'C+', 'C-', 'NC'])
 st.bar_chart(chart_data)   
 
-st-write('')
+st.write('')
 
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
