@@ -34,7 +34,10 @@ for uploaded_file in uploaded_files:
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
 st.write('Imagenes Cargadas: ',cont)
+st.write('')
 
+#boton detectar
+st.button("Detectar y clasificar")
 
 #grafico de resultdos
 y = [2,6,2,9,7,1,5,7,5,2,8] 
