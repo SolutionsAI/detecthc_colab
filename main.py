@@ -13,9 +13,9 @@ import time
 #st.sidebar.image('foto.jpeg')
 
 #umbral
-st.sidebar.title('Opciones de configuración')
+st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
-e = st.sidebar.slider('conf')  
+e = st.sidebar.slider('confianza')  
 #st.sidebar.write(e)
 #----------------------------------------------
 
@@ -36,7 +36,7 @@ for uploaded_file in uploaded_files:
      #st.image(detect(uploaded_file))
 st.write('Imagenes Cargadas: ',cont)
 st.write('')
-st.write('A continuación haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
+st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
 #boton detectar
 st.button("Comenzar")
