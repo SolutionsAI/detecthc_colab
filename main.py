@@ -31,7 +31,7 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 cont = 0
 for uploaded_file in uploaded_files:
      
-     cont = cont + inc
+     cont = cont + 1
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
