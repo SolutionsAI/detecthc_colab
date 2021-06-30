@@ -7,7 +7,8 @@ import os
 from matplotlib import pyplot as plt
 import time
 
-import cv2
+from .cv2 import *
+
 import torch
 import torch.backends.cudnn as cudnn
 
