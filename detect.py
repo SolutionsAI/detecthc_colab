@@ -15,7 +15,7 @@ from utils.torch_utils import select_device, load_classifier, time_synchronized
 from matplotlib import pyplot as plt
     
 def hola():
-    print("HOLAAAAAAAA")
+    return 67
     
     
 #muestra img en colores    
