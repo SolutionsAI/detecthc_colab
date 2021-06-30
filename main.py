@@ -15,10 +15,10 @@ import time
 #umbral
 st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
+e=45
+f=20
 e = st.sidebar.slider('Confianza HOS')  
-e = 80
 f = st.sidebar.slider('Confianza Coomassie') 
-f = 80
 #st.sidebar.write(e)
 #----------------------------------------------
 
