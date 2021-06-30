@@ -9,6 +9,8 @@ import os
 from matplotlib import pyplot as plt
 import time
 
+from detect import *
+
 #SIDEBAR stuff---------------------------------
 #imagen
 #st.sidebar.image('foto.jpeg')
