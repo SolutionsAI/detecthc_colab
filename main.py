@@ -8,6 +8,7 @@ from matplotlib import pyplot as plt
 import time
 
 import torch
+import torch.backends.cudnn as cudnn
 
 
 #SIDEBAR stuff---------------------------------
