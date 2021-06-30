@@ -12,7 +12,7 @@ import time
 from detect import *
 
 
-hola()
+k = hola()
 #SIDEBAR stuff---------------------------------
 #imagen
 #st.sidebar.image('foto.jpeg')
@@ -20,7 +20,7 @@ hola()
 #umbral
 st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
-e = st.sidebar.slider('Confianza HOS')  
+e = st.sidebar.slider('Confianza HOS',k)  
 f = st.sidebar.slider('Confianza Coomassie') 
 #st.sidebar.write(e)
 #----------------------------------------------
