@@ -11,6 +11,8 @@ import time
 
 from detect import *
 
+
+hola
 #SIDEBAR stuff---------------------------------
 #imagen
 #st.sidebar.image('foto.jpeg')
