@@ -14,7 +14,7 @@ from utils.plots import colors, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
 from matplotlib import pyplot as plt
     
-def hola:
+def hola():
     print("HOLAAAAAAAA")
     
     
