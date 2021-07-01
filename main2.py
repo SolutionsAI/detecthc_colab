@@ -76,6 +76,9 @@ i = st.button("Descargar")
 if i:
      j = detectHOS()
      st.write(j)
+     img = cv2.imread("runs/detect/exp/burro.jpg")
+     
+     st.image(img)
      #st.write("IMAGEN ORIGINAL")
      #h = cv2.imread("foto.jpeg")
      #st.image(h)
