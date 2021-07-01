@@ -65,9 +65,10 @@ st.write('')
 
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
-st.button("Descargar")
-
-h = cv2.imread("foto.jpeg")
-st.write(h)
+i = st.button("Descargar")
+if i:
+     h = cv2.imread("foto.jpeg")
+     st.write(h)
+     cv2.imwrite("recorte.jpg",h)
     
  
