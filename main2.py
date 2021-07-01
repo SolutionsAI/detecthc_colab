@@ -82,11 +82,11 @@ if i:
      cv2.imwrite("recorte.jpeg",h)
      p = cv2.imread("recort.jpeg")
      #st.image(p)
-     p1 = cv2.imread("img1.jpeg")
+     p1 = cv2.imread("algo.jpg")
      st.image(p1)
-     p2 = cv2.imread("img2.jpeg")
+     p2 = cv2.imread("algo123.jpg")
      st.image(p2)
-     p3 = cv2.imread("img3.jpeg")
+     p3 = cv2.imread("asdalgo123.jpg")
      st.image(p3)
      
      
