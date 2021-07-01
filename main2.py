@@ -40,7 +40,7 @@ for file in uploaded_files:
      i = i + 1
      #st.write(uploaded_files)
      image = Image.open(file)
-     #cv2.imwrite("img"+str(i)+".jpeg",)
+     cv2.imwrite("img"+str(i)+".jpg",image)
      #bytes_data = uploaded_file.read()
 
     
@@ -82,11 +82,11 @@ if i:
      cv2.imwrite("recorte.jpeg",h)
      p = cv2.imread("recort.jpeg")
      #st.image(p)
-     p1 = cv2.imread("algo.jpg")
+     p1 = cv2.imread("img1.jpg")
      st.image(p1)
-     p2 = cv2.imread("algo123.jpg")
+     p2 = cv2.imread("img2.jpg")
      st.image(p2)
-     p3 = cv2.imread("asdalgo123.jpg")
+     p3 = cv2.imread("img3.jpg")
      st.image(p3)
      
      
