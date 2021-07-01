@@ -33,7 +33,7 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
-cont = 0
+i = 0
 for uploaded_file in uploaded_files:
      
      i = i + 1
