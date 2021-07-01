@@ -83,11 +83,11 @@ if i:
      p = cv2.imread("recort.jpeg")
      #st.image(p)
      p1 = cv2.imread("img1.jpg")
-     st.image(p1)
+     st.image(p1[:,:,::-1])
      p2 = cv2.imread("img2.jpg")
      st.image(p2)
      p3 = cv2.imread("img3.jpg")
-     st.image(p3)
+     st.image(p3[:,:,::-1])
      
      
      
