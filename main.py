@@ -59,13 +59,15 @@ chart_data = pd.DataFrame({
 }).set_index('index')
 
 st.bar_chart(chart_data)   
-h = cv2.imread("foto.jpg")
+
 #cv2.imwrite('')
-st.write(h)
+st.write('')
 
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
 st.button("Descargar")
-    
+
+h = cv2.imread("foto.jpeg")
+st.write(h)
     
  
