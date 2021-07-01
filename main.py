@@ -20,7 +20,7 @@ k = hola()
 #umbral
 st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
-e = st.sidebar.slider('Confianza HOS',k)  
+e = st.sidebar.slider('Confianza HOS')  
 f = st.sidebar.slider('Confianza Coomassie') 
 #st.sidebar.write(e)
 #----------------------------------------------
@@ -59,8 +59,9 @@ chart_data = pd.DataFrame({
 }).set_index('index')
 
 st.bar_chart(chart_data)   
-
-st.write('')
+h = cv2.imread("foto.jpg")
+#cv2.imwrite('')
+st.write(h)
 
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
