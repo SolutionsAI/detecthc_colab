@@ -39,10 +39,11 @@ for uploaded_file in uploaded_files:
      h = cv2.imread("foto.jpeg")
      
      i = i + 1
-     st.write(uploaded_files)
+     #st.write(uploaded_files)
      cv2.imwrite("img"+str(i)+".jpeg",h[:,:,::-1])
      #bytes_data = uploaded_file.read()
-     #st.write("filename:", uploaded_file.name)
+     st.write("filename:", uploaded_file.name)
+     st.write("filename:", uploaded_file.data)
      #st.image(detect(uploaded_file))
      
      
