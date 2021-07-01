@@ -40,7 +40,7 @@ for uploaded_file in uploaded_files:
      
      i = i + 1
      #st.write(h)
-     cv2.imwrite("img"+str(i)+".jpeg",h)
+     cv2.imwrite("img"+str(i)+".jpeg",h[:,:,::-1])
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
