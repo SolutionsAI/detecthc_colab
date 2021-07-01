@@ -166,7 +166,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
 
     # Directories
     save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
-    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
+    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=False)  # make dir
 
     # Initialize
     set_logging()
