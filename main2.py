@@ -77,8 +77,13 @@ if i:
      j = detectHOS()
      st.write(j)
      img = cv2.imread("runs/detect/exp/burro.jpg")
+     st.image(img[:,:,::-1])
      
-     st.image(img)
+     img = cv2.imread("runs/detect/exp2/burro.jpg")
+     st.image(img[:,:,::-1])
+     
+     img = cv2.imread("runs/detect/exp3/burro.jpg")
+     st.image(img[:,:,::-1])
      #st.write("IMAGEN ORIGINAL")
      #h = cv2.imread("foto.jpeg")
      #st.image(h)
