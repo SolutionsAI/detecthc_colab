@@ -35,10 +35,10 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
 i = 0
 for uploaded_file in uploaded_files:
-     
+     h = cv2.imread("foto.jpeg")
      i = i + 1
-     
-     cv2.imwrite("img"+str(i)+".jpeg",uploaded_file)
+     st.write(uploaded_file)
+     cv2.imwrite("img"+str(i)+".jpeg",h)
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
