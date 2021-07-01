@@ -70,5 +70,6 @@ if i:
      h = cv2.imread("foto.jpeg")
      st.write(h)
      cv2.imwrite("recorte.jpg",h)
+     st.image(h)
     
  
