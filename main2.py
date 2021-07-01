@@ -67,9 +67,13 @@ st.write('')
 st.write('Descargar imágenes procesadas:')
 i = st.button("Descargar")
 if i:
+     st.write("IMAGEN ORIGINAL")
      h = cv2.imread("foto.jpeg")
-     st.write(h)
-     cv2.imwrite("recorte.jpg",h)
      st.image(h)
+     
+     st.write("IMAGEN GUARDADA")
+     cv2.imwrite("recorte.jpeg",h)
+     p = cv2.imread("recorte.jpeg")
+     st.image(p)
     
  
