@@ -40,11 +40,11 @@ for file in uploaded_files:
      i = i + 1
      #st.write(uploaded_files)
      image = Image.open(file)
-     cv2.imwrite("img"+str(i)+".jpg",image)
+     #cv2.imwrite("img"+str(i)+".jpg",image)
      #bytes_data = uploaded_file.read()
 
-    
-     st.image(file)
+     st.write(image)
+     st.image(image)
      
      
 st.write('Imagenes Cargadas: ',i)
