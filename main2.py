@@ -73,7 +73,7 @@ if i:
      
      st.write("IMAGEN GUARDADA")
      cv2.imwrite("recorte.jpeg",h)
-     p = cv2.imread("recorte.jpeg")
+     p = cv2.imread("recort.jpeg")
      st.image(p)
     
  
