@@ -135,10 +135,10 @@ def detectCOM(weights='yolov5x.pt',  # model.pt path(s)
 #VER LINEA 144
 
 @torch.no_grad()
-def detectHOS(weights='yolov5x.pt',  # model.pt path(s)
+def detectHOS(conf_thres=0.9,  # confidence threshold
+           weights='yolov5x.pt',  # model.pt path(s)
            source='burro.jpg',  # file/dir/URL/glob, 0 for webcam
            imgsz=640,  # inference size (pixels)
-           conf_thres=0.9,  # confidence threshold
            iou_thres=0.5,  # NMS IOU threshold
            max_det=1000,  # maximum detections per image
            device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
