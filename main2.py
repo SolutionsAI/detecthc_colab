@@ -37,7 +37,7 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 i = 0
 for uploaded_file in uploaded_files:
      h = cv2.imread("foto.jpeg")
-     bytes_data = uploaded_file.getvalue()
+     bytes_data = uploaded_file.getvalue().decode("utf-8")
      st.write(bytes_data)
      i = i + 1
      #st.write(uploaded_files)
