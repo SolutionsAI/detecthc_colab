@@ -73,11 +73,11 @@ st.write('')
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
 i = st.button("Descargar")
-#if i:
-     #j = detectHOS()
-     #st.write(j)
-     #img = cv2.imread("runs/detect/exp2/burro.jpg")
-     #st.image(img[:,:,::-1])
+if i:
+     j = detectHOS()
+     st.write(j)
+     img = cv2.imread("runs/detect/exp2/burro.jpg")
+     st.image(img[:,:,::-1])
 
      #st.write("IMAGEN ORIGINAL")
      #h = cv2.imread("foto.jpeg")
