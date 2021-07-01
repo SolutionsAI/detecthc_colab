@@ -20,8 +20,8 @@ k = hola()
 #umbral
 st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
-e = st.sidebar.slider('Confianza HOS')  
-f = st.sidebar.slider('Confianza Coomassie') 
+H = st.sidebar.slider('Confianza HOS')  
+C = st.sidebar.slider('Confianza Coomassie') 
 #st.sidebar.write(e)
 #----------------------------------------------
 
@@ -36,11 +36,11 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 #st.write(uploaded_files)
 i = 0
 for file in uploaded_files:
-     h = cv2.imread("foto.jpeg")     
+     u = cv2.imread("foto.jpeg")     
      i = i + 1
      #st.write(uploaded_files)
      image = Image.open(file)
-     cv2.imwrite("img"+str(i)+".jpg",h)
+     cv2.imwrite("img"+str(i)+".jpg",u)
      #bytes_data = uploaded_file.read()
 
      st.write(image)
@@ -74,7 +74,7 @@ st.write('')
 st.write('Descargar imágenes procesadas:')
 i = st.button("Descargar")
 if i:
-     j = detectHOS()
+     j = detectHOS(H)
      st.write(j)
      img = cv2.imread("runs/detect/exp2/burro.jpg")
      st.image(img[:,:,::-1])
