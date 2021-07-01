@@ -74,7 +74,7 @@ st.write('')
 st.write('Descargar imágenes procesadas:')
 i = st.button("Descargar")
 if i:
-     j = detectHOS(H)
+     j = detectHOS(H/100)
      st.write(j)
      img = cv2.imread("runs/detect/exp2/burro.jpg")
      st.image(img[:,:,::-1])
