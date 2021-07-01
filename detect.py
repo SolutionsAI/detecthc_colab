@@ -335,6 +335,8 @@ def detectHOS(weights='yolov5x.pt',  # model.pt path(s)
         strip_optimizer(weights)  # update model (to fix SourceChangeWarning)
 
     print(f'Done. ({time.time() - t0:.3f}s)')
+    
+    return conf_thres
 
 
 
