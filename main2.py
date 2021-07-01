@@ -36,11 +36,15 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 cont = 0
 for uploaded_file in uploaded_files:
      
-     cont = cont + 1
+     i = i + 1
+     
+     cv2.imwrite("img"+str(i)+".jpeg",uploaded_file)
      #bytes_data = uploaded_file.read()
      #st.write("filename:", uploaded_file.name)
      #st.image(detect(uploaded_file))
-st.write('Imagenes Cargadas: ',cont)
+     
+     
+st.write('Imagenes Cargadas: ',i)
 st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
@@ -69,11 +73,33 @@ i = st.button("Descargar")
 if i:
      st.write("IMAGEN ORIGINAL")
      h = cv2.imread("foto.jpeg")
-     st.image(h)
+     #st.image(h)
      
      st.write("IMAGEN GUARDADA")
      cv2.imwrite("recorte.jpeg",h)
      p = cv2.imread("recort.jpeg")
-     st.image(p)
-    
+     #st.image(p)
+     p1 = cv2.imread("img1.jpeg")
+     st.image(p1)
+     p2 = cv2.imread("img2.jpeg")
+     st.image(p2)
+     p3 = cv2.imread("img3.jpeg")
+     st.image(p3)
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
  
