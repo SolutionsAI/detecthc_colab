@@ -29,9 +29,9 @@ def mostrar(img,titulo=""):
 
 @torch.no_grad()
 def detectCOM(weights='yolov5x.pt',  # model.pt path(s)
-           source='data/images',  # file/dir/URL/glob, 0 for webcam
+           source='recorte.jpg',  # file/dir/URL/glob, 0 for webcam
            imgsz=640,  # inference size (pixels)
-           conf_thres=0.2,  # confidence threshold
+           conf_thres=0.1,  # confidence threshold
            iou_thres=0.0,  # NMS IOU threshold
            max_det=1000,  # maximum detections per image
            device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
@@ -264,13 +264,13 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                         img_crop = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True, save= False)
                         ks=str(k)
                         #cv2.imwrite("recorte.jpg",img_crop)
-                        COM = int(cv2.randu(0.5,0,1)[0]+0.5)
+                        #COM = int(cv2.randu(0.5,0,1)[0]+0.5)
                         #COM = llamar()
-                        #COM , ComConf  = detectCOM('/content/yolov5/weights/SoloCOM94b.pt','recorte.jpg')
-                 
+                        COM , ComConf  = detectCOM()
+                        
                         #print(" ")
                         #print("HOS: ",c)
-                        #print("COM: ",COM)
+                        print("COM: ",COM)
                         if COM != -1:
                             if (c == 0 and COM == 0):
                                 cls = 0.0
