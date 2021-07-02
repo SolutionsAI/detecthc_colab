@@ -165,8 +165,12 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
         ('rtsp://', 'rtmp://', 'http://', 'https://'))
 
     # Directories
-    save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
-    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=False)  # make dir
+    #save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
+    if os.path.exists(Path(project) / name):
+        rmtree(Path(project) / name)
+    
+    save_dir = Path(project) / name  # increment run
+    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
 
     # Initialize
     set_logging()
