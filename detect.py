@@ -166,6 +166,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
 
     # Directories
     #save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
+    print("DIRECTORIO: ",Path(project) / name,"EXIST OK:",os.path.exists(Path(project) / name))
     if os.path.exists(Path(project) / name):
         rmtree(Path(project) / name)
     
@@ -260,7 +261,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                         c = 4
                         ComConf = ''
                     else: #REEMPLAZAR el RANDON por la funcion de COM
-                        #img_crop = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True, save= False)
+                        img_crop = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True, save= False)
                         ks=str(k)
                         #cv2.imwrite("recorte.jpg",img_crop)
                         COM = int(cv2.randu(0.5,0,1)[0]+0.5)
