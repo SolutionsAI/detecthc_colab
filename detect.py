@@ -263,9 +263,8 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                     else: #REEMPLAZAR el RANDON por la funcion de COM
                         img_crop = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True, save= False)
                         ks=str(k)
-                        #cv2.imwrite("recorte.jpg",img_crop)
+                        cv2.imwrite("recorte.jpg",img_crop)
                         #COM = int(cv2.randu(0.5,0,1)[0]+0.5)
-                        #COM = llamar()
                         COM , ComConf  = detectCOM()
                         
                         #print(" ")
