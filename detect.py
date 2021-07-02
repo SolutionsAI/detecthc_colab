@@ -298,7 +298,8 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                             f.write(('%g ' * len(line)).rstrip() % line + '\n')
 
                     if save_img or save_crop or view_img:  # Add bbox to image
-                        label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f} ' + ComConf)
+                        #label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f} ' + ComConf)
+                        label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f} ')
                         #label = 'HHHH'
                         plot_one_box(xyxy, im0, label=label, color=colors(c, True), line_thickness=line_thickness)
                         a=1
