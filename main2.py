@@ -12,7 +12,7 @@ import time
 from detect import *
 
 
-k = hola()
+
 #SIDEBAR stuff---------------------------------
 #imagen
 #st.sidebar.image('foto.jpeg')
