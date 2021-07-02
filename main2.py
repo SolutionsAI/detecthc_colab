@@ -15,7 +15,9 @@ from detect import *
 
 from streamlit import caching
 caching.clear_cache()
+from IPython import *
 from IPython import get_ipython
+
 get_ipython().magic('reset -sf')
 
 #rmtree('app/detecthc/')
