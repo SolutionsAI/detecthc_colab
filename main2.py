@@ -11,6 +11,8 @@ import time
 
 from detect import *
 
+from streamlit import caching
+caching.clear_cache()
 
 
 #SIDEBAR stuff---------------------------------
