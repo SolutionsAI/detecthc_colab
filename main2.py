@@ -9,11 +9,14 @@ import os
 from matplotlib import pyplot as plt
 import time
 
+from shutil import rmtree
+
 from detect import *
 
 from streamlit import caching
 caching.clear_cache()
 
+rmtree('app/detecthc')
 
 #SIDEBAR stuff---------------------------------
 #imagen
