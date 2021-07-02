@@ -82,8 +82,10 @@ if i:
      st.image(img[:,:,::-1])
 
      #st.write("IMAGEN ORIGINAL")
-     #h = cv2.imread("foto.jpeg")
-     #st.image(h)
+     r = cv2.imread("foto.jpeg")
+     st.image(r[:,:,::-1])
+     caching.clear_cache()
+     st.image(r)
      
      #st.write("IMAGEN GUARDADA")
      #cv2.imwrite("recorte.jpeg",h)
