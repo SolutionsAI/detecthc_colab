@@ -249,7 +249,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
                 names = ['H+C+','H+C-','H-C+','H-C-','NC']
 
-                print("Names: ",names)
+                #print("Names: ",names)
                 # Write results
                 k=1
                 # print("DET: ",det)
@@ -267,9 +267,9 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                         #COM = llamar()
                         #COM , ComConf  = detectCOM('/content/yolov5/weights/SoloCOM94b.pt','recorte.jpg')
                  
-                        print(" ")
-                        print("HOS: ",c)
-                        print("COM: ",COM)
+                        #print(" ")
+                        #print("HOS: ",c)
+                        #print("COM: ",COM)
                         if COM != -1:
                             if (c == 0 and COM == 0):
                                 cls = 0.0
@@ -287,9 +287,9 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                             cls = 4.0
                             c = 4
 
-                    print("CLASE: ",c)
+                    #print("CLASE: ",c)
 
-                    print("==========================================================================")
+                    #print("==========================================================================")
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
                         line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
