@@ -9,10 +9,19 @@ import os
 from matplotlib import pyplot as plt
 import time
 
+from shutil import rmtree
+
 from detect import *
 
+from streamlit import caching
+caching.clear_cache()
+from IPython import *
+from IPython import get_ipython
 
-k = hola()
+#get_ipython().magic('reset -sf')
+
+#rmtree('app/detecthc/')
+
 #SIDEBAR stuff---------------------------------
 #imagen
 #st.sidebar.image('foto.jpeg')
@@ -20,8 +29,8 @@ k = hola()
 #umbral
 st.sidebar.title('Opciones de Configuración')
 st.sidebar.write("Umbral de confianza para detección:")
-e = st.sidebar.slider('Confianza HOS')  
-f = st.sidebar.slider('Confianza Coomassie') 
+#H = st.sidebar.slider('Confianza HOS',1)  
+C = st.sidebar.slider('Confianza',1) 
 #st.sidebar.write(e)
 #----------------------------------------------
 
@@ -33,14 +42,21 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True)
-cont = 0
-for uploaded_file in uploaded_files:
-     
-     cont = cont + 1
+#st.write(uploaded_files)
+i = 0
+for file in uploaded_files:
+     u = cv2.imread("foto.jpeg")     
+     i = i + 1
+     #st.write(uploaded_files)
+     image = Image.open(file)
+     cv2.imwrite("img"+str(i)+".jpg",u)
      #bytes_data = uploaded_file.read()
-     #st.write("filename:", uploaded_file.name)
-     #st.image(detect(uploaded_file))
-st.write('Imagenes Cargadas: ',cont)
+
+     st.write(image)
+     st.image(image)
+     
+     
+st.write('Imagenes Cargadas: ',i)
 st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
@@ -66,5 +82,26 @@ st.write('')
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
 i = st.button("Descargar")
+if i:
+     j = detectHOS(H/100)
+     st.write(j)
+     img = cv2.imread("runs/detect/exp/burro.jpg")
+     st.image(img[:,:,::-1])
 
- 
+     #st.write("IMAGEN ORIGINAL")
+     r = cv2.imread("foto.jpeg")
+     st.image(r[:,:,::-1])
+     caching.clear_cache()
+     st.image(r)
+     
+     #st.write("IMAGEN GUARDADA")
+     #cv2.imwrite("recorte.jpeg",h)
+     #p = cv2.imread("recort.jpeg")
+     #st.image(p)
+     #p1 = cv2.imread("img1.jpg")
+     #st.image(p1[:,:,::-1])
+     #p2 = cv2.imread("img2.jpg")
+     #st.image(p2)
+     #p3 = cv2.imread("img3.jpg")
+     #st.image(p3[:,:,::-1])
+    
