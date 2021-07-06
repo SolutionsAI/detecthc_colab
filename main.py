@@ -61,7 +61,18 @@ st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
 #boton detectar
-st.button("Comenzar")
+i = st.button("Comenzar")
+if i:
+     j = detectHOS(C/100)
+     st.write(j)
+     img = cv2.imread("runs/detect/exp/burro.jpg")
+     st.image(img[:,:,::-1])
+
+     #st.write("IMAGEN ORIGINAL")
+     r = cv2.imread("foto.jpeg")
+     st.image(r[:,:,::-1])
+     caching.clear_cache()
+     st.image(r)
 
 #grafico de resultdos
 st.write('Resultados:')
@@ -81,18 +92,8 @@ st.write('')
 
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
-i = st.button("Descargar")
-if i:
-     j = detectHOS(H/100)
-     st.write(j)
-     img = cv2.imread("runs/detect/exp/burro.jpg")
-     st.image(img[:,:,::-1])
+j = st.button("Descargar")
 
-     #st.write("IMAGEN ORIGINAL")
-     r = cv2.imread("foto.jpeg")
-     st.image(r[:,:,::-1])
-     caching.clear_cache()
-     st.image(r)
      
      #st.write("IMAGEN GUARDADA")
      #cv2.imwrite("recorte.jpeg",h)
