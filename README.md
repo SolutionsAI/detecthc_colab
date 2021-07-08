@@ -24,7 +24,7 @@ Adicionalmente también se podrá Descargar  un archivo zip con todas las imáge
 </div>
 
 <p>
-<img width="850" src="https://ibb.co/MSrPjky"></a>
+<img width="850" src="https://i.ibb.co/g9NtXZb/modif.png"></a>
 </p>
   
 </body>
