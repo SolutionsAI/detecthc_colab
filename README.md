@@ -1,7 +1,7 @@
 <head>
 <div align="center">
 <p>
-<img width="850" src="https://i.ibb.co/RTH8BmP/detecthc-logo.jpg"></a>
+<img width="850" src="logo.jpg"></a>
 </p>
 <br>  
   
@@ -24,7 +24,7 @@ Adicionalmente también se podrá Descargar  un archivo zip con todas las imáge
 </div>
 
 <p>
-<img width="850" src="https://i.ibb.co/g9NtXZb/modif.png"></a>
+<img width="850" src="instrucciones.png"></a>
 </p>
   
 </body>
