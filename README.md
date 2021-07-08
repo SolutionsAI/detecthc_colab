@@ -20,7 +20,7 @@ Luego se debe presionar el botón Comenzar, con lo cual se procede a realizar la
 
 Al concluir la detección se mostrarán los Resultados en un gráfico de barras, en el que cada barra representa el porcentaje de espermatozoides de cada clase detectados en el lote de imágenes cargadas, este gráfico podrá ser visualizado y descargado presionando en los iconos que aparecen a su derecha.
 
-Adicionalmente también se podrá Descargar  un archivo zip con todas las imágenes etiquetadas por la red, dando clic en el botón correspondiente y seleccionando luego el destino en el que desea guardarlo..</p>
+Adicionalmente también se podrá Descargar  un archivo zip con todas las imágenes etiquetadas por la red, dando clic en el botón correspondiente y seleccionando luego el destino en el que desea guardarlo.</p>
 </div>
 
 </body>
