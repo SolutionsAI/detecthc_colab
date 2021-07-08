@@ -23,5 +23,9 @@ Al concluir la detección se mostrarán los Resultados en un gráfico de barras,
 Adicionalmente también se podrá Descargar  un archivo zip con todas las imágenes etiquetadas por la red, dando clic en el botón correspondiente y seleccionando luego el destino en el que desea guardarlo.</p>
 </div>
 
+<p>
+<img width="850" src="https://ibb.co/MSrPjky"></a>
+</p>
+  
 </body>
 
