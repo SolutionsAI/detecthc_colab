@@ -2,7 +2,6 @@
 <div align="center">
 <p>
 <img width="850" src="https://i.ibb.co/RTH8BmP/detecthc-logo.jpg"></a>
-<img width="850" src="burro.jpg"></a>
 </p>
 <br>  
   
