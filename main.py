@@ -68,11 +68,6 @@ if i:
      img = cv2.imread("runs/detect/exp/burro.jpg")
      st.image(img[:,:,::-1])
 
-     #st.write("IMAGEN ORIGINAL")
-     r = cv2.imread("foto.jpeg")
-     st.image(r[:,:,::-1])
-     caching.clear_cache()
-     st.image(r)
 
 #grafico de resultdos
 st.write('Resultados:')
