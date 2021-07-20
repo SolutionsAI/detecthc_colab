@@ -28,7 +28,7 @@ def mostrar(img,titulo=""):
 #=================== FUNCION PARA COOMASSIE ========================================================================================================================
 
 @torch.no_grad()
-def detectCOM(weights='yolov5x.pt',  # model.pt path(s)
+def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
            source='recorte.jpg',  # file/dir/URL/glob, 0 for webcam
            imgsz=640,  # inference size (pixels)
            conf_thres=0.1,  # confidence threshold
@@ -136,7 +136,7 @@ def detectCOM(weights='yolov5x.pt',  # model.pt path(s)
 
 @torch.no_grad()
 def detectHOS(conf_thres=0.9,  # confidence threshold
-           weights='yolov5x.pt',  # model.pt path(s)
+           weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            source='burro.jpg',  # file/dir/URL/glob, 0 for webcam
            imgsz=640,  # inference size (pixels)
            iou_thres=0.5,  # NMS IOU threshold
