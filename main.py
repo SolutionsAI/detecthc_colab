@@ -23,7 +23,7 @@ from git import Repo
 
 existe = true
 
-if !existe:
+if not existe:
      Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
 
 #get_ipython().magic('reset -sf')
