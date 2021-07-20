@@ -248,7 +248,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
                 for c in det[:, -1].unique():
                     n = (det[:, -1] == c).sum()  # detections per class
                     s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
-                #names = ['H+C+','H+C-','H-C+','H-C-','NC']
+                names = ['H+C+','H+C-','H-C+','H-C-','NC']
 
                 #print("Names: ",names)
                 # Write results
