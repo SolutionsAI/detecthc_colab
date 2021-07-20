@@ -21,7 +21,7 @@ from IPython import get_ipython
 from git import Repo
 
 
-existe = true
+existe = True
 
 if not existe:
      Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
