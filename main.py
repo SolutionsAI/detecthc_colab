@@ -18,6 +18,8 @@ caching.clear_cache()
 from IPython import *
 from IPython import get_ipython
 
+from git import Repo
+
 #get_ipython().magic('reset -sf')
 
 #rmtree('app/detecthc/')
@@ -63,10 +65,11 @@ st.write('Haga click en "Comenzar" para realizar el proceso de detección y clas
 #boton detectar
 i = st.button("Comenzar")
 if i:
-     j = detectHOS(C/100)
-     st.write(j)
-     img = cv2.imread("runs/detect/exp/burro.jpg")
-     st.image(img[:,:,::-1])
+     Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", ".")
+     #j = detectHOS(C/100)
+     #st.write(j)
+     #img = cv2.imread("runs/detect/exp/burro.jpg")
+     #st.image(img[:,:,::-1])
 
 
 #grafico de resultdos
