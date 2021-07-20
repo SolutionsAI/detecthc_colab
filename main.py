@@ -65,8 +65,8 @@ st.write('Haga click en "Comenzar" para realizar el proceso de detección y clas
 #boton detectar
 i = st.button("Comenzar")
 if i:
-     #st.write(os.getcwd()) #para ver el directorio
-     Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
+     st.write(os.getcwd()) #para ver el directorio
+     #Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
      #j = detectHOS(C/100)
      #st.write(j)
      #img = cv2.imread("runs/detect/exp/burro.jpg")
@@ -93,7 +93,7 @@ st.write('')
 st.write('Descargar imágenes procesadas:')
 j = st.button("Descargar")
 if j:
-     st.write(os.listdir("/app/detecthc/pesos)"))
+     st.write(os.listdir("/app/detecthc)"))
      
      #st.write("IMAGEN GUARDADA")
      #cv2.imwrite("recorte.jpeg",h)
