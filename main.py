@@ -21,9 +21,7 @@ from IPython import get_ipython
 from git import Repo
 
 
-existe = True
-
-if not existe:
+if not os.path.exists(Path("/app/detecthc/pesos")):
      Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
 
 #get_ipython().magic('reset -sf')
