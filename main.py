@@ -92,7 +92,7 @@ st.write('')
 #descargar imagenes clasificadas
 st.write('Descargar imágenes procesadas:')
 j = st.button("Descargar")
-
+     st.write(os.listdir ("/app/detecthc/pesos)")
      
      #st.write("IMAGEN GUARDADA")
      #cv2.imwrite("recorte.jpeg",h)
