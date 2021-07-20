@@ -72,10 +72,10 @@ st.write('Haga click en "Comenzar" para realizar el proceso de detección y clas
 i = st.button("Comenzar")
 if i:
      #st.write(os.getcwd()) #para ver el directorio
-     j = detectHOS(C/100)
-     #st.write(j)
-     #img = cv2.imread("runs/detect/exp/burro.jpg")
-     #st.image(img[:,:,::-1])
+     #j = detectHOS(C/100)
+     st.write(j)
+     img = cv2.imread("runs/detect/exp/burro.jpg")
+     st.image(img[:,:,::-1])
 
 
 #grafico de resultdos
