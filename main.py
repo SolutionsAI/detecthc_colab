@@ -84,7 +84,7 @@ if i:
           Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
           
      #st.write(os.getcwd()) #para ver el directorio
-     j = detectHOS(uploaded_files, C/100)
+     j = detectHOS(C/100)
      st.write(j)
      #img = cv2.imread("runs/detect/exp/burro.jpg")
      #st.image(img[:,:,::-1])
