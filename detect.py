@@ -195,13 +195,7 @@ def detectHOS(variable,
 
     # Set Dataloader
     vid_path, vid_writer = None, None
-    if webcam:
-        view_img = check_imshow()
-        cudnn.benchmark = True  # set True to speed up constant image size inference
-        dataset = LoadStreams(source, img_size=imgsz, stride=stride)
-    else:
-        #dataset = LoadImages(source, img_size=imgsz, stride=stride)
-        dataset = variable
+    dataset = LoadImages(source, img_size=imgsz, stride=stride)
 
 
     # Run inference
