@@ -135,7 +135,8 @@ def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
 #VER LINEA 144
 
 @torch.no_grad()
-def detectHOS(conf_thres=0.9,  # confidence threshold
+def detectHOS(variable,
+           conf_thres=0.9,  # confidence threshold   
            source='burro.jpg',  # file/dir/URL/glob, 0 for webcam
            weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            imgsz=640,  # inference size (pixels)
@@ -199,7 +200,9 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
         cudnn.benchmark = True  # set True to speed up constant image size inference
         dataset = LoadStreams(source, img_size=imgsz, stride=stride)
     else:
-        dataset = LoadImages(source, img_size=imgsz, stride=stride)
+        #dataset = LoadImages(source, img_size=imgsz, stride=stride)
+        dataset = variable
+
 
     # Run inference
     if device.type != 'cpu':
