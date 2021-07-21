@@ -56,7 +56,7 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 if uploaded_files is not None:
     file_details = {"FileName":uploaded_files[0].name,"FileType":uploaded_files[0].type}
     st.write(file_details)
-    with open(os.path.join("/app/detechc/imagenes",uploaded_files[0].name),"wb") as f: 
+    with open(os.path.join("/app/detechc/",uploaded_files[0].name),"wb") as f: 
       f.write(uploaded_files[0].getbuffer())         
     st.success("Saved File")
 
