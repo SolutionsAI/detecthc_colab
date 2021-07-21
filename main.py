@@ -53,7 +53,7 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
 if uploaded_files is not None:
-    file_details = {"FileName":uploaded_files.name,"FileType":uploaded_files.type,"FileSize":uploaded_files.size}
+     file_details = {"FileName":uploaded_files.name,"FileType":uploaded_files.type,"FileSize":uploaded_files.size}
      st.write(file_details)
      
 i = 0
