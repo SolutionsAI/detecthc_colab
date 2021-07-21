@@ -52,10 +52,11 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-if uploaded_files is not None:
-     file_details = {"FileName":uploaded_files.name,"FileType":uploaded_files.type,"FileSize":uploaded_files.size}
-     st.write(file_details)
-     
+with open("/app/detechc/imagenes", "wb") as outfile:
+        # Copy the BytesIO stream to the output file
+        outfile.write(uploaded_files.getbuffer())
+st.write(os.listdir("/app/detecthc/imagenes"))
+
 i = 0
 #for file in uploaded_files:
 #     u = cv2.imread("foto.jpeg")     
@@ -84,7 +85,7 @@ if i:
           Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
           
      #st.write(os.getcwd()) #para ver el directorio
-     j = detectHOS(C/100)
+     j = detectHOS(C/100,uploaded_files)
      st.write(j)
      img = cv2.imread("runs/detect/exp/burro.jpg")
      st.image(img[:,:,::-1])
