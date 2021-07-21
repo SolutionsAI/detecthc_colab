@@ -53,12 +53,22 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
 
+if uploaded_files is not None:
+    file_details = {"FileName":uploaded_files[0].name,"FileType":uploaded_files[0].type}
+    st.write(file_details)
+    img = load_image(uploaded_files[0])
+    st.image(img,height=250,width=250)
+    with open(os.path.join("/app/detechc/imagenes",uploaded_files[0].name),"wb") as f: 
+      f.write(uploaded_files[0].getbuffer())         
+    st.success("Saved File")
+
 st.write(uploaded_files[0])
 i = 0
-#for file in uploaded_files:
+#for ids,names,types,sizes in uploaded_files:
+#     st.write
 #     u = cv2.imread("foto.jpeg")     
 #     i = i + 1
-#     #st.write(uploaded_files)
+     #st.write(uploaded_files)
 #     image = Image.open(file)
 #     cv2.imwrite("img"+str(i)+".jpg",u)
      #bytes_data = uploaded_file.read()
