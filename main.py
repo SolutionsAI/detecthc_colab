@@ -28,8 +28,8 @@ if os.path.exists("/app/detechc/"):
 if not os.path.exists("/app/detecthc/pesos"):
      Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
 
-     
-os.mkdir("/app/detecthc/imagenes")
+if not os.path.exists("/app/detecthc/imagenes"):     
+     os.mkdir("/app/detecthc/imagenes")
 #get_ipython().magic('reset -sf')
 
 #rmtree('app/detecthc/')
