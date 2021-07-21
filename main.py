@@ -52,14 +52,6 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-if uploaded_files is not None:
-    file_details = {"FileName":uploaded_files.name,"FileType":uploaded_files.type}
-    st.write(file_details)
-    img = load_image(uploaded_files)
-    st.image(img,height=250,width=250)
-    with open(os.path.join("/app/detecthc/pesos",uploaded_files.name),"wb") as f: 
-      f.write(uploaded_files.getbuffer())         
-    st.success("Saved File")
 
 i = 0
 #for file in uploaded_files:
