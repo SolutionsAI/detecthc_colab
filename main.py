@@ -51,7 +51,7 @@ st.title('Detector y clasificador HOS-Coomassie')
 st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
-uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg"])
+uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
 st.write(uploaded_files[0])
 i = 0
 #for file in uploaded_files:
