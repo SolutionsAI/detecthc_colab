@@ -52,18 +52,18 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg"])
-#st.write(uploaded_files)
+st.write(uploaded_files)
 i = 0
-for file in uploaded_files:
-     u = cv2.imread("foto.jpeg")     
-     i = i + 1
-     #st.write(uploaded_files)
-     image = Image.open(file)
-     cv2.imwrite("img"+str(i)+".jpg",u)
+#for file in uploaded_files:
+#     u = cv2.imread("foto.jpeg")     
+#     i = i + 1
+#     #st.write(uploaded_files)
+#     image = Image.open(file)
+#     cv2.imwrite("img"+str(i)+".jpg",u)
      #bytes_data = uploaded_file.read()
 
-     st.write(image)
-     st.image(image)
+#     st.write(image)
+#     st.image(image)
      
      
 st.write('Imagenes Cargadas: ',i)
