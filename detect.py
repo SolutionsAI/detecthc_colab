@@ -136,8 +136,8 @@ def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
 
 @torch.no_grad()
 def detectHOS(conf_thres=0.9,  # confidence threshold
-           weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            source='burro.jpg',  # file/dir/URL/glob, 0 for webcam
+           weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            imgsz=640,  # inference size (pixels)
            iou_thres=0.5,  # NMS IOU threshold
            max_det=1000,  # maximum detections per image
