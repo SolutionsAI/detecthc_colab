@@ -52,10 +52,6 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-with open("/app/detechc/imagenes", "wb") as outfile:
-        # Copy the BytesIO stream to the output file
-        outfile.write(uploaded_files.getbuffer())
-st.write(os.listdir("/app/detecthc/imagenes"))
 
 i = 0
 #for file in uploaded_files:
