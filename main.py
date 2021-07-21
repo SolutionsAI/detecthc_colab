@@ -20,9 +20,10 @@ from IPython import get_ipython
 
 from git import Repo
 
-if os.path.exists("/app/"):
-     rmtree("/app/")
+if os.path.exists("/app/detechc/"):
      print("SE BORRO TODO")
+     rmtree("/app/detechc/")
+     
 
 if not os.path.exists("/app/detecthc/pesos"):
      Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
