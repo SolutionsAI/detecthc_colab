@@ -62,7 +62,7 @@ if uploaded_files is not None:
       f.write(uploaded_files[0].getbuffer())         
     st.success("Saved File")
 
-    st.write(os.listdir("/app/detecthc/imagenes"))
+st.write(os.listdir("/app/detecthc/imagenes"))
 
 st.write(uploaded_files[0])
 i = 0
