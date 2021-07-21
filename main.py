@@ -56,13 +56,11 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 if uploaded_files is not None:
     file_details = {"FileName":uploaded_files[0].name,"FileType":uploaded_files[0].type}
     st.write(file_details)
-    img = load_image(uploaded_files[0])
-    st.image(img,height=250,width=250)
     with open(os.path.join("/app/detechc/imagenes",uploaded_files[0].name),"wb") as f: 
       f.write(uploaded_files[0].getbuffer())         
     st.success("Saved File")
 
-st.write(os.listdir("/app/detecthc/imagenes"))
+    st.write(os.listdir("/app/detecthc/imagenes"))
 
 st.write(uploaded_files[0])
 i = 0
