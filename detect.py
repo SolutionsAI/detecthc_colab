@@ -25,118 +25,10 @@ def mostrar(img,titulo=""):
     plt.axis("off")
     plt.show()
 
-#=================== FUNCION PARA COOMASSIE ========================================================================================================================
+    
 
 @torch.no_grad()
-def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
-           source='recorte.jpg',  # file/dir/URL/glob, 0 for webcam
-           imgsz=640,  # inference size (pixels)
-           conf_thres=0.1,  # confidence threshold
-           iou_thres=0.0,  # NMS IOU threshold
-           max_det=1000,  # maximum detections per image
-           device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
-           view_img=False,  # show results
-           save_txt=False,  # save results to *.txt
-           save_conf=False,  # save confidences in --save-txt labels
-           save_crop=False,  # save cropped prediction boxes
-           nosave=False,  # do not save images/videos
-           classes=None,  # filter by class: --class 0, or --class 0 2 3
-           agnostic_nms=False,  # class-agnostic NMS
-           augment=False,  # augmented inference
-           update=False,  # update all models
-           project='runs/detect',  # save results to project/name
-           name='exp',  # save results to project/name
-           exist_ok=False,  # existing project/name ok, do not increment
-           line_thickness=3,  # bounding box thickness (pixels)
-           hide_labels=False,  # hide labels
-           hide_conf=False,  # hide confidences
-           half=False,  # use FP16 half-precision inference
-           ):
-    print("PESOS COM: ",weights)
-    print("SOUERCE COM: ",source)
-    clase2 = 0
-    vector = []
-    confCOM = 0.0
-    # Initialize
-    set_logging()
-    device = select_device(device)
-    half &= device.type != 'cpu'  # half precision only supported on CUDA
-
-    # Load model
-    model = attempt_load(weights, map_location=device)  # load FP32 model
-    stride = int(model.stride.max())  # model stride
-    imgsz = check_img_size(imgsz, s=stride)  # check image size
-    names = model.module.names if hasattr(model, 'module') else model.names  # get class names
-    if half:
-        model.half()  # to FP16
-
-    # Second-stage classifier
-    classify = False
-    if classify:
-        modelc = load_classifier(name='resnet101', n=2)  # initialize
-        modelc.load_state_dict(torch.load('weights/resnet101.pt', map_location=device)['model']).to(device).eval()
-
-    # Set Dataloader
-    vid_path, vid_writer = None, None
-
-    dataset = LoadImages(source, img_size=imgsz, stride=stride)
-
-    # Run inference
-    if device.type != 'cpu':
-        model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(next(model.parameters())))  # run once
-    t0 = time.time()
-    #print("DATASET: ",dataset)
-    for path, img, im0s, vid_cap in dataset:
-        #print("Im0s: ",im0s)
-        img = torch.from_numpy(img).to(device)
-        img = img.half() if half else img.float()  # uint8 to fp16/32
-        img /= 255.0  # 0 - 255 to 0.0 - 1.0
-        if img.ndimension() == 3:
-            img = img.unsqueeze(0)
-
-        # Inference
-        t1 = time_synchronized()
-        pred = model(img, augment=augment)[0]
-
-        # Apply NMS
-        pred = non_max_suppression(pred, conf_thres, iou_thres, classes, agnostic_nms, max_det=max_det)
-        t2 = time_synchronized()
-
-        # Apply Classifier
-        if classify:
-            pred = apply_classifier(pred, modelc, img, im0s)
-
-        
-        # Process detections
-        for i, det in enumerate(pred):  # detections per image
-            if len(det):
-                for *xyxy, conf, cls in reversed(det):
-                    print("CONF: ",conf)
-                    confCOM = conf
-                    c2 = int(cls)  # integer class
-                    print("COM original: ",int(cls))
-                    vector.append(c2)
-                
-        b = True
-        if len(vector) > 1:
-          for j in range(1,len(vector)):
-            if vector[j] !=vector[j-1]:
-              b = False
-        if b:
-          return vector[0] , str(float(int(confCOM*100)/100))
-        else:
-          return -1 , ''
-                    
-
-
-
-#=================================================================================================================================================
-
-#VER LINEA 144
-
-@torch.no_grad()
-def detectHOS(variable,
-           conf_thres=0.9,  # confidence threshold   
+def detectHOS(conf_thres=0.9,  # confidence threshold   
            source='burro.jpg',  # file/dir/URL/glob, 0 for webcam
            weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            imgsz=640,  # inference size (pixels)
@@ -340,6 +232,116 @@ def detectHOS(variable,
     print(f'Done. ({time.time() - t0:.3f}s)')
     
     return conf_thres
+    
+    
+#=================== FUNCION PARA COOMASSIE ========================================================================================================================
+
+@torch.no_grad()
+def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
+           source='recorte.jpg',  # file/dir/URL/glob, 0 for webcam
+           imgsz=640,  # inference size (pixels)
+           conf_thres=0.1,  # confidence threshold
+           iou_thres=0.0,  # NMS IOU threshold
+           max_det=1000,  # maximum detections per image
+           device='',  # cuda device, i.e. 0 or 0,1,2,3 or cpu
+           view_img=False,  # show results
+           save_txt=False,  # save results to *.txt
+           save_conf=False,  # save confidences in --save-txt labels
+           save_crop=False,  # save cropped prediction boxes
+           nosave=False,  # do not save images/videos
+           classes=None,  # filter by class: --class 0, or --class 0 2 3
+           agnostic_nms=False,  # class-agnostic NMS
+           augment=False,  # augmented inference
+           update=False,  # update all models
+           project='runs/detect',  # save results to project/name
+           name='exp',  # save results to project/name
+           exist_ok=False,  # existing project/name ok, do not increment
+           line_thickness=3,  # bounding box thickness (pixels)
+           hide_labels=False,  # hide labels
+           hide_conf=False,  # hide confidences
+           half=False,  # use FP16 half-precision inference
+           ):
+    print("PESOS COM: ",weights)
+    print("SOUERCE COM: ",source)
+    clase2 = 0
+    vector = []
+    confCOM = 0.0
+    # Initialize
+    set_logging()
+    device = select_device(device)
+    half &= device.type != 'cpu'  # half precision only supported on CUDA
+
+    # Load model
+    model = attempt_load(weights, map_location=device)  # load FP32 model
+    stride = int(model.stride.max())  # model stride
+    imgsz = check_img_size(imgsz, s=stride)  # check image size
+    names = model.module.names if hasattr(model, 'module') else model.names  # get class names
+    if half:
+        model.half()  # to FP16
+
+    # Second-stage classifier
+    classify = False
+    if classify:
+        modelc = load_classifier(name='resnet101', n=2)  # initialize
+        modelc.load_state_dict(torch.load('weights/resnet101.pt', map_location=device)['model']).to(device).eval()
+
+    # Set Dataloader
+    vid_path, vid_writer = None, None
+
+    dataset = LoadImages(source, img_size=imgsz, stride=stride)
+
+    # Run inference
+    if device.type != 'cpu':
+        model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(next(model.parameters())))  # run once
+    t0 = time.time()
+    #print("DATASET: ",dataset)
+    for path, img, im0s, vid_cap in dataset:
+        #print("Im0s: ",im0s)
+        img = torch.from_numpy(img).to(device)
+        img = img.half() if half else img.float()  # uint8 to fp16/32
+        img /= 255.0  # 0 - 255 to 0.0 - 1.0
+        if img.ndimension() == 3:
+            img = img.unsqueeze(0)
+
+        # Inference
+        t1 = time_synchronized()
+        pred = model(img, augment=augment)[0]
+
+        # Apply NMS
+        pred = non_max_suppression(pred, conf_thres, iou_thres, classes, agnostic_nms, max_det=max_det)
+        t2 = time_synchronized()
+
+        # Apply Classifier
+        if classify:
+            pred = apply_classifier(pred, modelc, img, im0s)
+
+        
+        # Process detections
+        for i, det in enumerate(pred):  # detections per image
+            if len(det):
+                for *xyxy, conf, cls in reversed(det):
+                    print("CONF: ",conf)
+                    confCOM = conf
+                    c2 = int(cls)  # integer class
+                    print("COM original: ",int(cls))
+                    vector.append(c2)
+                
+        b = True
+        if len(vector) > 1:
+          for j in range(1,len(vector)):
+            if vector[j] !=vector[j-1]:
+              b = False
+        if b:
+          return vector[0] , str(float(int(confCOM*100)/100))
+        else:
+          return -1 , ''
+                    
+
+
+
+#=================================================================================================================================================
+
+#VER LINEA 144
 
 
     
