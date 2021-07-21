@@ -58,7 +58,7 @@ st.write(os.listdir("/app/detecthc"))
 if uploaded_files is not None:
     with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
       f.write(uploaded_files[0].getbuffer())         
-    st.success("Saved File:{} to tempDir".format(uploaded_files.name)")
+    st.success("Saved File:{} to tempDir".format(uploaded_files.name))
 
     #st.write(os.listdir("/app/detecthc/imagenes"))
 
