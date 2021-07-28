@@ -30,6 +30,7 @@ if not os.path.exists("/app/detecthc/pesos"):
 
 if not os.path.exists("/app/detecthc/imagenes"):     
      os.mkdir("/app/detecthc/imagenes")
+
 #get_ipython().magic('reset -sf')
 
 #rmtree('app/detecthc/')
@@ -53,12 +54,16 @@ st.title('Detector y clasificador HOS-Coomassie')
 st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
+dir_img = "/app/detecthc/imagenes"
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
 #st.write(os.listdir("/app/detecthc"))
 largo = len(uploaded_files)
 st.write(largo)
 for i in range(largo):
      st.write(uploaded_files[i].name)
+     with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
+          f.write(uploaded_files[i].getbuffer())         
+     st.success("Saved File:{} to directory".format(uploaded_files[i].name))     
      
 #if uploaded_files is not None:
 #    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
