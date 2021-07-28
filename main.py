@@ -54,11 +54,12 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-st.write(os.listdir("/app/detecthc"))
-if uploaded_files is not None:
-    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
-      f.write(uploaded_files[0].getbuffer())         
-    st.success("Saved File:{} to tempDir".format(uploaded_files.name))
+#st.write(os.listdir("/app/detecthc"))
+st.write(uploaded_files[0])
+#if uploaded_files is not None:
+#    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
+#      f.write(uploaded_files[0].getbuffer())         
+#    st.success("Saved File:{} to tempDir".format(uploaded_files.name))
 
     #st.write(os.listdir("/app/detecthc/imagenes"))
 
