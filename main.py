@@ -73,9 +73,9 @@ st.write('Haga click en "Comenzar" para realizar el proceso de detección y clas
 #boton detectar
 i = st.button("Comenzar")
 if i:
-     if os.path.exists("/app/detechc/"):
-          st.write("SE BORRO TODO")
-          rmtree("/app/detechc/")
+#     if os.path.exists("/app/detechc/"):
+#          st.write("SE BORRO TODO")
+#          rmtree("/app/detechc/")
      
      if not os.path.exists("/app/detecthc/pesos"):
           Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
@@ -83,6 +83,8 @@ if i:
      #st.write(os.getcwd()) #para ver el directorio
      j = detectHOS(C/100)
      st.write("termiando con exito")
+     st.write(os.listdir("runs/detect/exp/))
+     
      #img = cv2.imread("runs/detect/exp/burro.jpg")
      #st.image(img[:,:,::-1])
 
