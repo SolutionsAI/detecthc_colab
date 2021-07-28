@@ -56,22 +56,17 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 #browse files
 dir_img = "/app/detecthc/imagenes"
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-im = [2]
+
 largo = len(uploaded_files)
 for i in range(largo):
-     st.write(uploaded_files[i].name)
+     #st.write(uploaded_files[i].name)
      with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
           f.write(uploaded_files[i].getbuffer())
    
      #im[i] = Image.open(dir_img+'/'+uploaded_files[i].name)
      #st.write(len(im), "largoooo")
      #st.image(im[i],caption=uploaded_files[i].name)
-     
-     #cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
-     
-     
-     #cv2.imwrite(os.path.join(dir_img,uploaded_files[i].name, uploaded_files[i].getbuffer()))
-     
+        
      #st.success("Saved File:{} to directory".format(uploaded_files[i].name))    
      #st.image(os.path.join(dir_img,uploaded_files[i].name), caption=uploaded_files[i].name)
         
@@ -99,13 +94,13 @@ if i:
           st.write("directorio de pesos creado satisfactoriamente.")
           
      #st.write(os.getcwd()) #para ver el directorio
-     #j = detectHOS(C/100)
-     #st.write("termiando con exito")
+     j = detectHOS(C/100)
+     st.write("termiando con exito")
      
-     #if not os.path.exists("runs/detect/exp/"):
-     #     st.write("no existe el directorio /exp/")
-     #else:
-     #     st.write(os.listdir("runs/detect/exp/"))
+     if not os.path.exists("runs/detect/exp/"):
+          st.write("no existe el directorio /exp/")
+     else:
+          st.write(os.listdir("runs/detect/exp/"))
      
      ###
      #img = cv2.imread("runs/detect/exp/burro.jpg")
