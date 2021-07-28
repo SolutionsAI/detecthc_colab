@@ -62,8 +62,8 @@ for i in range(largo):
      st.write(uploaded_files[i].name)
      with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
           f.write(uploaded_files[i].getbuffer())
-     imogen = Image.open(dir_img+'/'+uploaded_files[i].name)
-     cv2.imshow(imogen)     
+   
+     im = Image.open(dir_img+'/'+uploaded_files[i].name)
      #cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
      
      
