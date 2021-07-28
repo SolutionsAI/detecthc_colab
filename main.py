@@ -82,7 +82,9 @@ if i:
 #          rmtree("/app/detechc/")
 
      for e in range(largo):
-          st.image(os.path.join(dir_img,uploaded_files[e].name), caption=uploaded_files[e].name)
+          #st.image(os.path.join(dir_img,uploaded_files[e].name), caption=uploaded_files[e].name)
+          plt.imshow(os.path.join(dir_img,uploaded_files[e].name) 
+          plt.show()
           
      
      #if not os.path.exists("/app/detecthc/pesos"):
