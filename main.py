@@ -58,7 +58,7 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 largo = len(uploaded_files)
 st.write(largo)
 for i in range(largo):
-     st.write(uploaded_files[i])
+     st.write(uploaded_files[i].name)
      
 #if uploaded_files is not None:
 #    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
