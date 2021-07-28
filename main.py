@@ -64,7 +64,8 @@ for i in range(largo):
      with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
           f.write(uploaded_files[i].getbuffer())         
      st.success("Saved File:{} to directory".format(uploaded_files[i].name))     
-     
+st.write(os.listdir("/app/detecthc/imagenes"))
+
 #if uploaded_files is not None:
 #    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
 #      f.write(uploaded_files[0].getbuffer())         
