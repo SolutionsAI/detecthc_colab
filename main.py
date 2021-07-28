@@ -56,13 +56,14 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 #browse files
 dir_img = "/app/detecthc/imagenes"
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
-#st.write(os.listdir("/app/detecthc"))
+img = load_image(uploaded_files)
+st.write(imd)
 largo = len(uploaded_files)
-for i in range(largo):
+#for i in range(largo):
      #st.write(uploaded_files[i].name)
      #with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
      #     f.write(uploaded_files[i].getbuffer())
-     cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
+#     cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
      
      
      #cv2.imwrite(os.path.join(dir_img,uploaded_files[i].name, uploaded_files[i].getbuffer()))
