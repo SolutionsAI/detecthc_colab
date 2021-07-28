@@ -96,10 +96,10 @@ if i:
      #j = detectHOS(C/100)
      #st.write("termiando con exito")
      
-     if not os.path.exists("runs/detect/exp/"):
-          st.write("no existe el directorio /exp/")
-     else:
-          st.write(os.listdir("runs/detect/exp/"))
+     #if not os.path.exists("runs/detect/exp/"):
+     #     st.write("no existe el directorio /exp/")
+     #else:
+     #     st.write(os.listdir("runs/detect/exp/"))
      
      ###
      #img = cv2.imread("runs/detect/exp/burro.jpg")
