@@ -83,7 +83,7 @@ if i:
 
      for e in range(largo):
           #st.image(os.path.join(dir_img,uploaded_files[e].name), caption=uploaded_files[e].name)
-          st.write(dir_img+uploaded_files[e].name)
+          st.write(dir_img+'/'+uploaded_files[e].name)
           #plt.imshow(os.path.join(dir_img,uploaded_files[e].name) 
           #plt.show()
           
