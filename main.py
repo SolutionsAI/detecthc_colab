@@ -66,7 +66,7 @@ for i in range(largo):
      st.success("Saved File:{} to directory".format(uploaded_files[i].name))    
      st.image(os.path.join(dir_img,uploaded_files[i].name), caption=uploaded_files[i].name)
      
-       
+print(os.listdir(dir_img))        
 st.write('Imagenes Cargadas: ',largo)
 st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
