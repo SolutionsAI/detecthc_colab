@@ -65,29 +65,8 @@ for i in range(largo):
           f.write(uploaded_files[i].getbuffer())         
      st.success("Saved File:{} to directory".format(uploaded_files[i].name))     
 st.write(os.listdir("/app/detecthc/imagenes"))
-
-#if uploaded_files is not None:
-#    with open(os.path.join("tempDir",uploaded_files[0].name),"wb") as f: 
-#      f.write(uploaded_files[0].getbuffer())         
-#    st.success("Saved File:{} to tempDir".format(uploaded_files.name))
-
-    #st.write(os.listdir("/app/detecthc/imagenes"))
-
-i = 0
-#for ids,names,types,sizes in uploaded_files:
-#     st.write
-#     u = cv2.imread("foto.jpeg")     
-#     i = i + 1
-     #st.write(uploaded_files)
-#     image = Image.open(file)
-#     cv2.imwrite("img"+str(i)+".jpg",u)
-     #bytes_data = uploaded_file.read()
-
-#     st.write(image)
-#     st.image(image)
-     
-     
-st.write('Imagenes Cargadas: ',i)
+       
+st.write('Imagenes Cargadas: ',largo)
 st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
 
@@ -95,7 +74,7 @@ st.write('Haga click en "Comenzar" para realizar el proceso de detección y clas
 i = st.button("Comenzar")
 if i:
      if os.path.exists("/app/detechc/"):
-          print("SE BORRO TODO")
+          st.write("SE BORRO TODO")
           rmtree("/app/detechc/")
      
      if not os.path.exists("/app/detecthc/pesos"):
