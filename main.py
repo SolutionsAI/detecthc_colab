@@ -64,6 +64,7 @@ for i in range(largo):
           f.write(uploaded_files[i].getbuffer())
    
      im = Image.open(dir_img+'/'+uploaded_files[i].name)
+     im.show()
      #cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
      
      
