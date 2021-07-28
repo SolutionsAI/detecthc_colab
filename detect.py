@@ -29,7 +29,7 @@ def mostrar(img,titulo=""):
 
 @torch.no_grad()
 def detectHOS(conf_thres=0.9,  # confidence threshold   
-           source='hola.jpg',  # file/dir/URL/glob, 0 for webcam
+           source='/app/detecthc/imagenes/',  # file/dir/URL/glob, 0 for webcam
            weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
            imgsz=640,  # inference size (pixels)
            iou_thres=0.5,  # NMS IOU threshold
