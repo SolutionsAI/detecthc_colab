@@ -65,11 +65,8 @@ for i in range(largo):
           f.write(uploaded_files[i].getbuffer())         
      #st.success("Saved File:{} to directory".format(uploaded_files[i].name))    
      #st.image(os.path.join(dir_img,uploaded_files[i].name), caption=uploaded_files[i].name)
-     image = Image.open(os.path.join(dir_img,uploaded_files[i].name)
-     image.show()
-     
-     
-st.write(dir_img))        
+        
+st.write(os.listdir(dir_img))      
 st.write('Imagenes Cargadas: ',largo)
 st.write('')
 st.write('Haga click en "Comenzar" para realizar el proceso de detección y clasificación de espermatozoides')
@@ -85,7 +82,7 @@ if i:
           Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
           st.write("directorio de pesos creado satisfactoriamente.")
           
-     st.write(os.getcwd()) #para ver el directorio
+     #st.write(os.getcwd()) #para ver el directorio
      j = detectHOS(C/100)
      st.write("termiando con exito")
      
