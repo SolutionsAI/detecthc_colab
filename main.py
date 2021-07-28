@@ -83,14 +83,14 @@ if i:
 
      for e in range(largo):
           #st.image(os.path.join(dir_img,uploaded_files[e].name), caption=uploaded_files[e].name)
-          st.write(os.path.join(dir_img,uploaded_files[e].name)
+          st.write(dir_img+uploaded_files[e].name)
           #plt.imshow(os.path.join(dir_img,uploaded_files[e].name) 
           #plt.show()
           
      
-     #if not os.path.exists("/app/detecthc/pesos"):
-     #     Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
-     #     st.write("directorio de pesos creado satisfactoriamente.")
+     if not os.path.exists("/app/detecthc/pesos"):
+          Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
+          st.write("directorio de pesos creado satisfactoriamente.")
           
      #st.write(os.getcwd()) #para ver el directorio
      #j = detectHOS(C/100)
