@@ -63,9 +63,9 @@ for i in range(largo):
      with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
           f.write(uploaded_files[i].getbuffer())
    
-     im[i] = Image.open(dir_img+'/'+uploaded_files[i].name)
-     st.write(len(im), "largoooo")
-     st.image(im[i],caption=uploaded_files[i].name)
+     #im[i] = Image.open(dir_img+'/'+uploaded_files[i].name)
+     #st.write(len(im), "largoooo")
+     #st.image(im[i],caption=uploaded_files[i].name)
      
      #cv2.imwrite(dir_img+'/'+uploaded_files[i].name, uploaded_files[i])
      
