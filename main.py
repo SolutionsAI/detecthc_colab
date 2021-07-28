@@ -60,9 +60,11 @@ uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True
 largo = len(uploaded_files)
 for i in range(largo):
      #st.write(uploaded_files[i].name)
-     #with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
-     #     f.write(uploaded_files[i].getbuffer())         
-     cv2.imwrite(os.path.join(dir_img,uploaded_files[i].name, uploaded_files[i].getbuffer()))
+     with open(os.path.join(dir_img,uploaded_files[i].name),"wb") as f: 
+          f.write(uploaded_files[i].getbuffer())         
+     
+     
+     #cv2.imwrite(os.path.join(dir_img,uploaded_files[i].name, uploaded_files[i].getbuffer()))
      
      #st.success("Saved File:{} to directory".format(uploaded_files[i].name))    
      #st.image(os.path.join(dir_img,uploaded_files[i].name), caption=uploaded_files[i].name)
