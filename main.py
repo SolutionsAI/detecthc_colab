@@ -80,20 +80,25 @@ if i:
 #     if os.path.exists("/app/detechc/"):
 #          st.write("SE BORRO TODO")
 #          rmtree("/app/detechc/")
+
+     for e in range(largo):
+          st.image(os.path.join(dir_img,uploaded_files[e].name), caption=uploaded_files[e].name)
+          
      
-     if not os.path.exists("/app/detecthc/pesos"):
-          Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
-          st.write("directorio de pesos creado satisfactoriamente.")
+     #if not os.path.exists("/app/detecthc/pesos"):
+     #     Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
+     #     st.write("directorio de pesos creado satisfactoriamente.")
           
      #st.write(os.getcwd()) #para ver el directorio
-     j = detectHOS(C/100)
-     st.write("termiando con exito")
+     #j = detectHOS(C/100)
+     #st.write("termiando con exito")
      
      if not os.path.exists("runs/detect/exp/"):
           st.write("no existe el directorio /exp/")
      else:
           st.write(os.listdir("runs/detect/exp/"))
      
+     ###
      #img = cv2.imread("runs/detect/exp/burro.jpg")
      #st.image(img[:,:,::-1])
 
