@@ -79,11 +79,16 @@ if i:
      
      if not os.path.exists("/app/detecthc/pesos"):
           Repo.clone_from("https://gitlab.com/iasolutions_arg/detecthc_weights.git", "/app/detecthc/pesos")
+          print("directorio de pesos creado satisfactoriamente.")
           
      st.write(os.getcwd()) #para ver el directorio
      j = detectHOS(C/100)
      st.write("termiando con exito")
-     st.write(os.listdir("runs/detect/exp/"))
+     
+     if not os.path.exists("runs/detect/exp/"):
+          st.write("no existe el directorio /exp/")
+     else:
+          st.write(os.listdir("runs/detect/exp/"))
      
      #img = cv2.imread("runs/detect/exp/burro.jpg")
      #st.image(img[:,:,::-1])
