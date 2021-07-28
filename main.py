@@ -55,9 +55,9 @@ st.write("Seleccione el conjunto de imágenes a segmentar y clasificar")
 #browse files
 uploaded_files = st.file_uploader("Cargar Imágenes", accept_multiple_files=True, help="Solo se aceptan imágenes en formato .png y .jpg", type=["png", "jpg", "jpeg"])
 #st.write(os.listdir("/app/detecthc"))
-largo = [len(uploaded_files)]
+largo = len(uploaded_files)
 st.write(largo)
-for i in largo:
+for i in range(largo):
      st.write(uploaded_files[i])
      
 #if uploaded_files is not None:
