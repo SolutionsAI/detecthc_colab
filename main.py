@@ -83,7 +83,7 @@ if i:
      #st.write(os.getcwd()) #para ver el directorio
      j = detectHOS(C/100)
      st.write("termiando con exito")
-     st.write(os.listdir("runs/detect/exp/))
+     st.write(os.listdir("runs/detect/exp/"))
      
      #img = cv2.imread("runs/detect/exp/burro.jpg")
      #st.image(img[:,:,::-1])
