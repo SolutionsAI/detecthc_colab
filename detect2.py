@@ -252,13 +252,13 @@ def detect(weights='yolov5s.pt',  # model.pt path(s)
                         cls = 4.0
                         c = 4
                         ComConf = ''
-                    else: #REEMPLAZAR el RANDON por la funcion de COM
+                    else: #REEMPLAZAR el RANDOM por la funcion de COM
                         img_crop = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True, save= False)
                         ks=str(k)
                         cv2.imwrite("/content/recorte.jpg",img_crop)
                         #COM = int(cv2.randu(0.5,0,1)[0]+0.5)
                         #COM = llamar()
-                        COM , ComConf  = detectCOM('/content/yolov5/weights/SoloCOM94b.pt','/content/recorte.jpg')
+                        COM , ComConf  = detectCOM('/content/detecthc_weights/SoloCOM94b.pt','/content/recorte.jpg')
                       
                         print(" ")
                         print("HOS: ",c)
