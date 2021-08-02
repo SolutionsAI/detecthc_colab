@@ -31,8 +31,8 @@ def mostrar(img,titulo=""):
 
 @torch.no_grad()
 def detectHOS(conf_thres=0.9,  # confidence threshold   
-           source='/app/detecthc/imagenes',  # file/dir/URL/glob, 0 for webcam
-           weights='/app/detecthc/pesos/SoloHOS87.pt',  # model.pt path(s)
+           source='/content/imagenes',  # file/dir/URL/glob, 0 for webcam
+           weights='/content/detecthc_weights/SoloHOS87.pt',  # model.pt path(s)
            imgsz=640,  # inference size (pixels)
            iou_thres=0.5,  # NMS IOU threshold
            max_det=1000,  # maximum detections per image
@@ -239,7 +239,7 @@ def detectHOS(conf_thres=0.9,  # confidence threshold
 #=================== FUNCION PARA COOMASSIE ========================================================================================================================
 
 @torch.no_grad()
-def detectCOM(weights='/app/detecthc/pesos/SoloCOM94b.pt',  # model.pt path(s)
+def detectCOM(weights='/content/detecthc_weights/SoloCOM94b.pt',  # model.pt path(s)
            source='recorte.jpg',  # file/dir/URL/glob, 0 for webcam
            imgsz=640,  # inference size (pixels)
            conf_thres=0.1,  # confidence threshold
